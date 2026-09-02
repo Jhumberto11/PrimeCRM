@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\imosa\\source\\repos\\PrimeCRM_Api.Infraestructure\\PrimeCRM_Api.Infraestructure.csproj": {}
+    "C:\\Users\\imosa\\source\\repos\\PrimeCRM\\PrimeCRM_Api.Infraestructure\\PrimeCRM_Api.Infraestructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\imosa\\source\\repos\\PrimeCRM_Api.Infraestructure\\PrimeCRM_Api.Infraestructure.csproj": {
+    "C:\\Users\\imosa\\source\\repos\\PrimeCRM\\PrimeCRM_Api.Infraestructure\\PrimeCRM_Api.Infraestructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\imosa\\source\\repos\\PrimeCRM_Api.Infraestructure\\PrimeCRM_Api.Infraestructure.csproj",
+        "projectUniqueName": "C:\\Users\\imosa\\source\\repos\\PrimeCRM\\PrimeCRM_Api.Infraestructure\\PrimeCRM_Api.Infraestructure.csproj",
         "projectName": "PrimeCRM_Api.Infraestructure",
-        "projectPath": "C:\\Users\\imosa\\source\\repos\\PrimeCRM_Api.Infraestructure\\PrimeCRM_Api.Infraestructure.csproj",
+        "projectPath": "C:\\Users\\imosa\\source\\repos\\PrimeCRM\\PrimeCRM_Api.Infraestructure\\PrimeCRM_Api.Infraestructure.csproj",
         "packagesPath": "C:\\Users\\imosa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\imosa\\source\\repos\\PrimeCRM_Api.Infraestructure\\obj\\",
+        "outputPath": "C:\\Users\\imosa\\source\\repos\\PrimeCRM\\PrimeCRM_Api.Infraestructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

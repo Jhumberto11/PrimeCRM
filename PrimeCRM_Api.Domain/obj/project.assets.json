@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\imosa\\source\\repos\\PrimeCRM_Api.Domain\\PrimeCRM_Api.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\imosa\\source\\repos\\PrimeCRM\\PrimeCRM_Api.Domain\\PrimeCRM_Api.Domain.csproj",
       "projectName": "PrimeCRM_Api.Domain",
-      "projectPath": "C:\\Users\\imosa\\source\\repos\\PrimeCRM_Api.Domain\\PrimeCRM_Api.Domain.csproj",
+      "projectPath": "C:\\Users\\imosa\\source\\repos\\PrimeCRM\\PrimeCRM_Api.Domain\\PrimeCRM_Api.Domain.csproj",
       "packagesPath": "C:\\Users\\imosa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\imosa\\source\\repos\\PrimeCRM_Api.Domain\\obj\\",
+      "outputPath": "C:\\Users\\imosa\\source\\repos\\PrimeCRM\\PrimeCRM_Api.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
