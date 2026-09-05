@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PrimeCRM_Api.Infraestructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78b070a9810ce2949f78f3d9cd5e0512fd6bdb57")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38c77c087390af9345ee082ef25fe951a7991b81")]
 [assembly: System.Reflection.AssemblyProductAttribute("PrimeCRM_Api.Infraestructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PrimeCRM_Api.Infraestructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

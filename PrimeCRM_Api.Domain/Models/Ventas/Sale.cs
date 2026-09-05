@@ -65,7 +65,7 @@ namespace PrimeCRM_Api.Domain.Models.Ventas
 
         // Número de guía / tracking
         [MaxLength(100)]
-        public string? TrackingNumber { get; set; }
+        public string TrackingNumber { get; set; } = string.Empty;
 
 
         // Estado general de la venta
