@@ -1,0 +1,11 @@
+cat > .gitignore <<'EOF'
+# .NET
+**/bin/
+**/obj/
+.vs/
+*.user
+*.suo
+
+# macOS
+.DS_Store
+EOF
