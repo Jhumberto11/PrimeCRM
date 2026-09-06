@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using PrimeCRM_Api.Domain.Models.Ventas;
 
 namespace PrimeCRM_Api.Domain.Models.Masters
 {
@@ -12,5 +13,6 @@ namespace PrimeCRM_Api.Domain.Models.Masters
     public class SalesChannel : Base
     {
 
+        public ICollection<Sale> Sales { get; set; }
     }
 }
