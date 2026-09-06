@@ -23,12 +23,6 @@ namespace PrimeCRM_Api.Domain.Models.Liquidaciones
             = DateTime.UtcNow;
 
 
-        // Empresa que realizó la liquidación
-        public int CourierCompanyId { get; set; }
-
-        public CourierCompany CourierCompany { get; set; } = null!;
-
-
         // Monto Total de Liquidacion
         public decimal SettlementTotal { get; set; }
 

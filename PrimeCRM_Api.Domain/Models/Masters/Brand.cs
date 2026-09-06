@@ -7,7 +7,7 @@ namespace PrimeCRM_Api.Domain.Models.Masters
 
     public class Brand : Base
     {
-        public ICollection<Product> Products { get; set; }
+        public ICollection<Product> Products { get; set; } = new List<Product>();               
 
     }
 }
