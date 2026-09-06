@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../PrimeCRM_Api.Domain/PrimeCRM_Api.Domain.csproj" Id="40de5c9a-da1f-467d-a8de-c51009fd69a3" />
+  <Project Path="../PrimeCRM_Api.Infraestructure/PrimeCRM_Api.Infraestructure.csproj" Id="90f0ba1f-1030-4028-a292-1af3cedd99dd" />
+  <Project Path="../PrimeCRM_Api.Services/PrimeCRM_Api.Application.csproj" Id="6a22b260-d343-4ed0-b9d6-a7cafd3c5de3" />
+  <Project Path="PrimeCRM_Api.csproj" />
+</Solution>
