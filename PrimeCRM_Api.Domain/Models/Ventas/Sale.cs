@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using PrimeCRM_Api.Domain.Models.Liquidaciones;
+﻿using PrimeCRM_Api.Domain.Models.Liquidaciones;
 using PrimeCRM_Api.Domain.Models.Masters;
 using System;
 using System.Collections.Generic;
@@ -66,8 +65,8 @@ namespace PrimeCRM_Api.Domain.Models.Ventas
 
 
         // Número de guía / tracking
-        [Index(IsUnique = true)]
-        public string? TrackingNumber { get; set; }
+        [MaxLength(100)]
+        public string TrackingNumber { get; set; } = string.Empty;
         public LiquidationItem? LiquidationItem { get; set; } = null!;
 
         
