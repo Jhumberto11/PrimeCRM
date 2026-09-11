@@ -19,10 +19,10 @@ namespace PrimeCRM_Api.Infraestructure.Persistence
         // =========================
         // MASTER DATA
         // =========================
+        public DbSet<Brand> Brands { get; set; }
 
         public DbSet<Product> Products { get; set; }
 
-        public DbSet<Brand> Brands { get; set; }
 
         public DbSet<CourierCompany> CourierCompanies { get; set; }
 
@@ -64,5 +64,28 @@ namespace PrimeCRM_Api.Infraestructure.Persistence
         public DbSet<Liquidation> Liquidations { get; set; }
 
         public DbSet<LiquidationItem> LiquidationItems { get; set; }
+
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+
+            ConfigureProduct(modelBuilder);
+
+            
+
+        }
+        private void ConfigureProduct(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>(e =>
+            {
+                e.HasOne(p => p.Brand)
+                    .WithMany(b => b.Products)
+                    .HasForeignKey(p => p.BrandId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+        }
     }
 }
