@@ -16,7 +16,7 @@ namespace PrimeCRM_Api.Domain.Models.Masters
         [MaxLength(4)]
         public string? Last4 { get; set; }
 
-        public ICollection<RestockOrder> RestockOrders { get; set; }
+        public ICollection<RestockOrder>? RestockOrders { get; set; }
 
 
     }

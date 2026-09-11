@@ -81,11 +81,96 @@ namespace PrimeCRM_Api.Infraestructure.Persistence
         {
             modelBuilder.Entity<Product>(e =>
             {
+                e.HasKey(p=> p.Id);
+
                 e.HasOne(p => p.Brand)
                     .WithMany(b => b.Products)
                     .HasForeignKey(p => p.BrandId)
                     .OnDelete(DeleteBehavior.Restrict);
             });
+
+            
+        }
+
+        private void ConfigureInventoryMovement(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<InventoryMovement>(e =>
+            {
+                e.HasKey(i => i.Id);
+
+                e.HasOne(i => i.Product)
+                    .WithMany(p => p.InventoryMovements)
+                    .HasForeignKey(im => im.ProductID)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+        }
+
+        private void RestockConfigure(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<RestockOrder>(e =>
+            {
+                e.HasKey(ro => ro.Id);
+
+                e.HasOne(ro => ro.Product)
+                    .WithMany(p => p.RestockOrders)
+                    .HasForeignKey(ro => ro.ProductId)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+
+                e.HasOne(ro => ro.FreightCompany)
+                    .WithMany(fc => fc.RestockOrders)
+                    .HasForeignKey(ro => ro.FreightCompanyId)
+                    .OnDelete(DeleteBehavior.Restrict);
+                
+                e.HasOne(ro=> ro.PaymentMethod)
+                    .WithMany(pm => pm.RestockOrders)
+                    .HasForeignKey(ro => ro.PaymentMethodId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+        }
+
+        private void ConfigureSale(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Sale>(e =>
+            {
+                e.HasKey(s => s.Id);
+
+                e.HasOne(s => s.Product)
+                    .WithMany(p => p.Sales)
+                    .HasForeignKey(s => s.ProductId)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                e.HasOne(s=> s.CourierCompany)
+                    .WithMany(cc => cc.Sales)
+                    .HasForeignKey(s => s.CourierCompanyId)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                e.HasOne(s => s.SalesChannel)
+                    .WithMany(sc => sc.Sales)
+                    .HasForeignKey(s => s.SalesChannelId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+        }
+
+        private void ConfigureLiquidation(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<LiquidationItem>(e =>
+            {
+                e.HasKey(l => l.Id);
+
+                e.HasOne(l => l.Sale)
+                    .WithOne(s => s.LiquidationItem)
+                    .HasForeignKey<LiquidationItem>(li => li.Tracking)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+
+                e.HasOne(li => li.Liquidation)
+                    .WithMany(l => l.Trackings)
+                    .HasForeignKey(li => li.LiquidationId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            
         }
     }
 }
