@@ -9,11 +9,8 @@ namespace PrimeCRM_Api.Domain.Models.Liquidaciones
         public int Id { get; set; }
 
 
-        // Liquidación a la que pertenece
         public int LiquidationId { get; set; }
-
         public Liquidation Liquidation { get; set; } = null!;
-
         // Tracking proporcionado por el encomendista
         [Required]
         [MaxLength(100)]

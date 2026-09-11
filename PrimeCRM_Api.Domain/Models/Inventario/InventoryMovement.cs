@@ -14,7 +14,7 @@ namespace PrimeCRM_Api.Domain.Models.Inventario
 
         public int ProductID { get; set; }
         // Navigation Property
-        public Product Producto { get; set; }
+        public Product Product { get; set; } = null!;
 
 
         public DateOnly Date { get; set; }
@@ -31,7 +31,6 @@ namespace PrimeCRM_Api.Domain.Models.Inventario
         public string? Notes { get; set; }
 
         // Navigation Property
-        public Product Product { get; set; } = null!;
 
 
     }
